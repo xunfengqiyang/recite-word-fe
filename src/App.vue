@@ -1,6 +1,15 @@
 <script>
-import books from 'components/books';
-import home from 'components/home';
+import books from './components/books'
+import home from './components/home';
+
+export default {
+  components: { books, home },
+  data: function() {
+    return {}
+  }
+
+}
+
 </script>
 
 <template>
@@ -8,20 +17,13 @@ import home from 'components/home';
     <div>
       <div>
         <books></books>
+        <home></home>
       </div>
 
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  data: {
-
-  }
-
-}
-</script>
 
 <style>
 #app {

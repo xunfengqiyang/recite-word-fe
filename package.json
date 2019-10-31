@@ -9,7 +9,7 @@
     "deploy": "./build.sh"
   },
   "dependencies": {
-    "element-ui": "^2.3.4",
+    "element-ui": "2.12.0",
     "vue": "^2.5.16"
   },
   "engines": {
