@@ -1,33 +1,11 @@
-<script>
-import books from './components/books'
-import home from './components/home';
-
-export default {
-  components: { books, home },
-  data: function() {
-    return {}
-  }
-
-}
-
-</script>
-
 <template>
-  <div id="app">
-    <div>
+  <div id="material-kit">
+    <div :class="{ 'nav-open': NavbarStore.showNavbar }">
+      <router-view name="header" />
       <div>
-        <books></books>
-        <home></home>
+        <router-view />
       </div>
-
+      <router-view name="footer" />
     </div>
   </div>
 </template>
-
-
-<style>
-#app {
-  font-family: Helvetica, sans-serif;
-  text-align: center;
-}
-</style>
