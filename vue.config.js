@@ -25,6 +25,10 @@ module.exports = {
         changeOrigin: true,
         target: 'http://127.0.0.1:8080'
       },
+      '/search': {
+        changeOrigin: true,
+        target: 'http://127.0.0.1:8080'
+      },
     }
   }
 };

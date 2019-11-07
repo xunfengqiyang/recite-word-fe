@@ -3,7 +3,7 @@
   <div class="books">
 
     <h3>{{title}}</h3>
-    <md-button class="md-primary md-sm" @click="drawer = true">切换单词本</md-button>
+    <md-button class="md-primary md-sm" @click="drawer = true">选择单词本</md-button>
 
     <el-drawer 
       title="单词本"
@@ -31,10 +31,11 @@
         <span>上传新的单词本</span>
         <el-upload
           class="upload-demo"
+          :show-file-list="false"
           drag
           action="/api/book"
-          @on-success="uploadSuccess"
-          @on-error="uploadFail"
+          :on-success="uploadSuccess"
+          :on-error="uploadFail"
           multiple>
           <i class="el-icon-upload"></i>
           <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
@@ -55,7 +56,7 @@ export default {
       title: "请先选择单词本",
       drawer: false,
       direction: 'ltr',
-      gridData: [],
+      gridData: []
     };
   },
   ready: function () {

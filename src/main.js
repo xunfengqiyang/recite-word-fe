@@ -20,12 +20,14 @@ import MaterialKit from "./plugins/material-kit";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import VueResource from "vue-resource";
+import {Modal} from "@/components"
 
 Vue.config.productionTip = false;
 
 Vue.use(MaterialKit);
 Vue.use(ElementUI);
 Vue.use(VueResource);
+Vue.component(Modal);
 
 const NavbarStore = {
   showNavbar: false
